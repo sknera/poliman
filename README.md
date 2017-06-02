@@ -1,0 +1,2 @@
+# poliman
+zadanie na staż
