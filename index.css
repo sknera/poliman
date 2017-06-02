@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #efefef;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: "Roboto", sans-serif; }
+
+i {
+  color: #1d89e4;
+  padding: 5px; }
+
+nav {
+  background: #282b30;
+  width: 10%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  float: left;
+  color: white; }
+
+.element {
+  border-top: 0.2px solid gray; }
+
+#logo {
+  display: flex;
+  justify-content: center;
+  height: 150px;
+  align-items: center;
+  color: gray; }
+
+#circle {
+  display: flex;
+  justify-content: center;
+  border: 1px solid gray;
+  border-radius: 100%;
+  align-items: center;
+  color: gray;
+  padding: 43px 29px;
+  font-weight: 900;
+  font-size: 18px; }
+
+#top {
+  width: 100%;
+  background: white;
+  height: 60px; }
+
+button {
+  color: white;
+  background: #1d89e4;
+  border-radius: 13px;
+  padding: 3px 9px; }
+  button:nth-child(1) {
+    float: right; }
+
+td {
+  text-align: center;
+  vertical-align: middle;
+  min-height: 200px;
+  min-width: 180px;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 18px; }
+  td:nth-child(5n) .fa-floppy-o, td .fa-pencil {
+    padding: 8px;
+    float: left;
+    margin-left: 45px; }
+  td:nth-child(5n) .fa-trash {
+    padding: 8px;
+    float: right;
+    margin-right: 45px; }
+
+th {
+  text-align: center;
+  background-color: #1d89e4; }
+
+.icon {
+  color: white;
+  background: #1d89e4;
+  border-radius: 50%; }
+
+#inputs {
+  margin-bottom: 200px;
+  background: white;
+  margin: 10px;
+  border-radius: 13px; }
+
+#inputs .addValue {
+  padding-right: 200px;
+  margin-bottom: 12px; }
+#inputs .twoColumns {
+  display: flex; }
+
+table {
+  display: block;
+  margin-top: 20px;
+  background: white;
+  border: 1px solid #1d89e4; }
+
+th {
+  color: white;
+  height: 60px; }
+
+#table {
+  height: 550px;
+  background: white;
+  border-radius: 13px;
+  margin: 0 20px 0 20px; }
+
+#scroll {
+  display: block;
+  width: 930px;
+  max-height: 465px;
+  overflow-y: scroll; }
+  #scroll::-webkit-scrollbar {
+    width: 0.1em !important;
+    background-color: #1d89e4; }
+
+#top, #inputs, #table {
+  box-shadow: 0px 2px 1px 0px #979797; }
+
+.highlight {
+  background: rgba(29, 137, 228, 0.3); }
+
+/*# sourceMappingURL=index.css.map */
