@@ -1,76 +1,82 @@
 <!DOCTYPE HTML>
 <head>
- <meta charset="UTF-8">
- <html lang="pl">
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
- <link rel="stylesheet" href="style.css"/>
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">    
-     </head>
+ 	<meta charset="UTF-8">
+ 	<html lang="pl">
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.0.0/angular.min.js"></script>
+ 	<link rel="stylesheet" href="second/index.css"/>
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">    
+ </head>
 <body ng-app="myApp" ng-controller="myCtrl">
    <nav>	
-   <div id="logo"><div id="circle">LOGO</div></div>
-  <div class="element"><i class="fa fa-home" aria-hidden="true"></i>Element1</div>
-     <div class="element"><i class="fa fa-user-circle" aria-hidden="true"></i>Element2</div>
-   <div class="element"><i class="fa fa-university" aria-hidden="true"></i>Element3</div>
+  		<div id="logo">
+   			<div id="circle">LOGO</div>
+  		</div>
+   	 	<div class="element">  <i class="fa fa-home" aria-hidden="true"></i>Element1  </div>
+     	<div class="element">  <i class="fa fa-user-circle" aria-hidden="true"> </i>Element2  </div>
+   		<div class="element">  <i class="fa fa-university" aria-hidden="true"> </i>Element3  </div>
    </nav>
 <div id="conteiner">
-   <div id="top"><p>APLIKACJA TESTOWA</p> <button  ng-click="functionLogOut()">wyloguj</button></div>
+  	 <div id="top"><p>APLIKACJA TESTOWA</p> <button  ng-click="functionLogOut()">wyloguj</button></div>
 
 
 <form id="inputs">
-<p>Zawartość</p>
-<div class="twoColumns"><div class="addValue"> Kolumna1: <input  ng-maxlength="25" ng-model="addColumn1" type="text"></div>
-<div class="addValue"> Kolumna2: <input  ng-maxlength="25" ng-model="addColumn2" type="text"></div></div>
-<div class="twoColumns"><div class="addValue"> Kolumna3: <input  ng-maxlength="25" ng-model="addColumn3" type="text"></div>
-<div class="addValue"> Kolumna4: <input  ng-maxlength="25" ng-model="addColumn4" type="text"></div></div>
+	<p>Zawartość</p>
+	<div class="twoColumns">
+		<div class="addValue"> Kolumna1: <input  ng-maxlength="25" ng-model="addColumn1" type="text"></div>
+		<div class="addValue"> Kolumna2: <input  ng-maxlength="25" ng-model="addColumn2" type="text"></div>
+	</div>
+
+	<div class="twoColumns">
+		<div class="addValue"> Kolumna3: <input  ng-maxlength="25" ng-model="addColumn3" type="text"></div>
+		<div class="addValue"> Kolumna4: <input  ng-maxlength="25" ng-model="addColumn4" type="text"></div>
+	</div>
     <button ng-click="functionAdd()">Dodaj</button>
 </form>
 
 <div id="table">
 <p>Zawartość</p>
 <div id="scroll">	
- <table  ng-show="showTable"> <thead> <tr>
- <th>kolumna 1</th>
- <th>kolumna 2</th> 
- <th>kolumna 3</th> 
- <th>kolumna 4</th> 
- <th></th>
- </tr> </thead> 
+ <table  ng-show="showTable">
+  <thead>
+  <tr>
+ 	<th>kolumna 1</th>
+ 	<th>kolumna 2</th> 
+ 	<th>kolumna 3</th> 
+ 	<th>kolumna 4</th> 
+ 	<th></th>
+  </tr>
+  </thead> 
  <tbody>
  <tr  ng-class="{highlight: column.id==selected}" ng-repeat="column in columns" ng-click="highlight(column)">
  <td class="column">
-  <div ng-hide="editingData[column.id]"> {{ column.column1 }}</div> 
-   <div ng-show="editingData[column.id]"><input type="text" ng-model="column.column1"/></div></td> 
+	<div ng-hide="editingData[column.id]"> {{ column.column1 }}</div> 
+	<div ng-show="editingData[column.id]"><input type="text" ng-model="column.column1"/></div>
+</td> 
 
  <td class="column">
-  <div ng-hide="editingData[column.id]"> {{ column.column2 }}</div> 
-   <div ng-show="editingData[column.id]"><input type="text" ng-model="column.column2"/></div> </td> 
-
-
- <td class="column"> 
- <div ng-hide="editingData[column.id]"> {{ column.column3 }}</div> 
- <div ng-show="editingData[column.id]"><input type="text" ng-model="column.column3"/></div> </td> 
-
+ 	<div ng-hide="editingData[column.id]"> {{ column.column2 }}</div> 
+ 	<div ng-show="editingData[column.id]"><input type="text" ng-model="column.column2"/></div>
+</td> 
 
  <td class="column"> 
- <div ng-hide="editingData[column.id]"> {{ column.column4 }}</div> 
- <div ng-show="editingData[column.id]"><input type="text" ng-model="column.column4"/></div> </td>
+ 	<div ng-hide="editingData[column.id]"> {{ column.column3 }}</div> 
+ 	<div ng-show="editingData[column.id]"><input type="text" ng-model="column.column3"/></div> 
+</td> 
 
+ <td class="column"> 
+ 	<div ng-hide="editingData[column.id]"> {{ column.column4 }}</div> 
+ 	<div ng-show="editingData[column.id]"><input type="text" ng-model="column.column4"/></div>
+</td>
 
  <td class="column">
-    <button  class="fa fa-floppy-o icon" aria-hidden="true" ng-show="editingData[column.id]" ng-click="update(column)"></button>
-   <button  class="fa fa-pencil icon" aria-hidden="true" ng-hide="editingData[column.id]" ng-click="modify(column)"></button>
-
-
-
-
+    <div  class="fa fa-floppy-o icon" aria-hidden="true" ng-show="editingData[column.id]" ng-click="update(column)"></div>
+   <div  class="fa fa-pencil icon" aria-hidden="true" ng-hide="editingData[column.id]" ng-click="modify(column)"></div>
  <i class="fa fa-trash icon" aria-hidden="true"  ng-click="functionDelete(column)"></i>
+</td>
 
-   </td>
-  </tr> </tbody> </table></div> </div>
+</tr> </tbody> </table></div> </div>
 </div>
-
 
 <script>
 var app = angular.module("myApp", []);
@@ -78,10 +84,6 @@ app.controller("myCtrl", ['$scope',function($scope) {
 	
 //wyświetla tabelę
 	 $scope.showTable=true;
-
-
-
-
 
     $scope.columns = [ {
       "column1":"Treść kolumny 1",
@@ -130,20 +132,6 @@ app.controller("myCtrl", ['$scope',function($scope) {
         "column2":"Treść kolumny 2",
        "column3":"Treść kolumny 3",
         "column4":"Treść kolumny 4",
-        "id":"6"
-   },
-   {
-      "column1":"Treść kolumny 1",
-        "column2":"Treść kolumny 2",
-       "column3":"Treść kolumny 3",
-        "column4":"Treść kolumny 4",
-        "id":"7"
-   },
-   {
-      "column1":"Treść kolumny 1",
-        "column2":"Treść kolumny 2",
-       "column3":"Treść kolumny 3",
-        "column4":"Treść kolumny 4",
         "id":"8"
    },
    {
@@ -177,72 +165,61 @@ app.controller("myCtrl", ['$scope',function($scope) {
 
 
 //ukrywa tabelę
-
-      $scope.functionLogOut=function() {
-	 $scope.showTable=false;
-
-   };
+    $scope.functionLogOut=function() 
+    {
+		$scope.showTable=false;
+    };
 
 
 
 
 //wybiera id klikniętego wiersza i pozwala na jego edycję, a poźniej zapis
-
     $scope.editingData = {};
     
-    for (var i = 0, length = $scope.columns.length; i < length; i++) {
+    for (var i = 0, length = $scope.columns.length; i < length; i++)
+    {
       $scope.editingData[$scope.columns[i].id] = false;
     }
 
-    $scope.modify = function(column){
+    $scope.modify = function(column)
+    {
         $scope.editingData[column.id] = true;
-
     };
 
-    $scope.update = function(column){
+    $scope.update = function(column)
+    {
         $scope.editingData[column.id] = false;
 
         //przestaje podświetlać 
         $scope.selected=null;
     };
 
-$scope.highlight =function(column)
-{
-
+	$scope.highlight =function(column)
+	{
         //podświetla wybrany wiersz
 	  $scope.selected=column.id;
-};
-
+	};
 
 
 //dodaje nowy wiersz
-   $scope.functionAdd=function() {
-var newcolumn = {
-    "column1":$scope.addColumn1,
-    "column2":$scope.addColumn2,
-    "column3":$scope.addColumn3,
-    "column4":$scope.addColumn4
- }
-$scope.columns.push(newcolumn);
-   };
-
+   $scope.functionAdd=function() 
+   {
+	var newcolumn = {
+   	 	"column1":$scope.addColumn1,
+   	 	"column2":$scope.addColumn2,
+   		"column3":$scope.addColumn3,
+   	 	"column4":$scope.addColumn4
+ 	}
+		$scope.columns.push(newcolumn);
+   	};
 
 //usuwa wybrany wiersz
    $scope.functionDelete=function(index) {
-   	 var index = $scope.columns.indexOf(index);
-  $scope.columns.splice(index, 1);   
+   		var index = $scope.columns.indexOf(index);
+  		$scope.columns.splice(index, 1);   
    };
-
-
-
-
-
-
-
 
 }]);
 </script>
-
 </body>
 </html>
-
