@@ -4,7 +4,8 @@ body {
   background: #efefef;
   color: rgba(0, 0, 0, 0.8);
   font-family: "Roboto", sans-serif;
-  display: flex; }
+  display: flex;
+  overflow: hidden; }
 
 i {
   color: #1d89e4;
@@ -41,7 +42,7 @@ nav {
   font-size: 18px; }
 
 #top {
-  width: 180vh;
+  width: 178vh;
   background: white;
   height: 60px;
   display: flex;
@@ -52,6 +53,7 @@ nav {
     right: 15px; }
 
 button {
+  border: none;
   color: white;
   background: #1d89e4;
   border-radius: 5px;
@@ -144,10 +146,16 @@ th {
 tbody {
   display: block;
   max-height: 465px;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  margin-right: 15px; }
   tbody::-webkit-scrollbar {
-    width: 0.1em;
-    background-color: #1d89e4; }
+    width: 2px;
+    height: 2px; }
+  tbody::-webkit-scrollbar-thumb {
+    border: 2px solid #1d89e4; }
+  tbody::-webkit-scrollbar-track {
+    border: 2px none #80ff00;
+    border-radius: 14px; }
 
 p {
   font-weight: 700;
@@ -156,9 +164,14 @@ p {
   left: 20px; }
 
 tr {
-  width: 1100px; }
+  width: 1100px;
+  border-bottom: 0.1em solid #ccc;
+  height: 50px; }
 
 td, th {
   padding-right: 90px; }
 
-/*# sourceMappingURL=index.css.map */
+th {
+  border-right: 1px solid white; }
+  th:nth-child(5) {
+    border-right: 0; }
