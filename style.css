@@ -81,9 +81,6 @@ td {
     color: rgba(0, 0, 0, 0.4);
     font-size: 18px; }
 
-th {
-  text-align: center;
-  background-color: #1d89e4; }
 
 .icon {
   color: white;
@@ -118,11 +115,6 @@ table {
   background: white;
   border: 1px solid #1d89e4;
   margin-left: 20px; }
-
-th {
-  color: white;
-  height: 60px;
-  width: 200px; }
 
 #table {
   height: 590px;
@@ -172,6 +164,11 @@ td, th {
   padding-right: 90px; }
 
 th {
+  text-align: center;
+  background-color: #1d89e4;
+  color: white;
+  height: 60px;
+  width: 200px;
   border-right: 1px solid white; }
   th:nth-child(5) {
     border-right: 0; }
