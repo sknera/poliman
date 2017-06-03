@@ -7,7 +7,7 @@ body
 	background: #efefef
 	color: rgba(0, 0, 0, 0.8)
 	font-family: 'Roboto', sans-serif
-
+	display: flex
 i
 	color: $main-color
 	padding: 5px
@@ -42,14 +42,20 @@ nav
 	font-size: 18px
 
 #top
-	width: 100%
+	width: 180vh
 	background: white
 	height: 60px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	button
+		position: relative
+		right: 15px
 
 button
 	color: white
 	background: $main-color
-	border-radius: $curly
+	border-radius: 5px
 	padding: 3px 9px
 	&:nth-child(1)
 		float: right
@@ -69,6 +75,10 @@ td
 		padding: 8px
 		float: right
 		margin-right: 45px
+	input
+		width: 140px
+		color: rgba(0,0,0,0.4)
+		font-size: 18px
 
 th
 	text-align: center
@@ -80,45 +90,76 @@ th
 	border-radius: 50%
 
 #inputs
-	margin-bottom: 200px
+	height: 165px
 	background: white
-	margin: 10px
+	margin: 15px
 	border-radius: $curly
-
-#inputs 
+	button
+		position: relative
+		left: 80px
+		bottom: 5px
 	.addValue
 		padding-right: 200px
 		margin-bottom: 12px
 	.twoColumns
 		display: flex
+		padding-left: 20px
+		color: #666
+	p
+		padding-bottom: 34px
+		position: relative
+		top: 10px
 
 table
 	display: block
+	border-collapse: collapse
 	margin-top: 20px
 	background: white
 	border: 1px solid $main-color
+	margin-left: 20px
+
 
 th
 	color: white
 	height: 60px
+	width: 200px
 
 #table
-	height: 550px
+	height: 590px
 	background: white
 	border-radius: $curly
-	margin: 0 20px 0 20px
+	margin: 0 15px 0 15px
+	p
+		top: 5px
 
 #scroll
 	display: block
-	width: 930px
+	width: 1400px
 	max-height: 465px
-	overflow-y: scroll
-	&::-webkit-scrollbar
-		width: 0.1em !important
-		background-color: $main-color
 
 #top, #inputs, #table
 	box-shadow: 0px 2px 1px 0px rgba(151,151,151,1)
 
 .highlight
 	background: rgba(29,137,228,0.3)
+
+tbody
+	display: block
+	max-height: 465px
+	overflow-y: scroll
+	&::-webkit-scrollbar
+		width: 0.1em
+		background-color: $main-color
+
+p
+	font-weight: 700
+	color: #666
+	position: relative
+	left: 20px
+
+tr
+	width: 1100px
+
+td, th
+	padding-right: 90px
+

@@ -3,7 +3,7 @@
  <meta charset="UTF-8">
  <html lang="pl">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
- <link rel="stylesheet" href="style.css"/>
+ <link rel="stylesheet" href="second/index.css"/>
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">    
      </head>
@@ -14,11 +14,12 @@
      <div class="element"><i class="fa fa-user-circle" aria-hidden="true"></i>Element2</div>
    <div class="element"><i class="fa fa-university" aria-hidden="true"></i>Element3</div>
    </nav>
-
-   <div id="top">APLIKACJA TESTOWA <button  ng-click="functionLogOut()">wyloguj</button></div>
+<div id="conteiner">
+   <div id="top"><p>APLIKACJA TESTOWA</p> <button  ng-click="functionLogOut()">wyloguj</button></div>
 
 
 <form id="inputs">
+<p>Zawartość</p>
 <div class="twoColumns"><div class="addValue"> Kolumna1: <input  ng-maxlength="25" ng-model="addColumn1" type="text"></div>
 <div class="addValue"> Kolumna2: <input  ng-maxlength="25" ng-model="addColumn2" type="text"></div></div>
 <div class="twoColumns"><div class="addValue"> Kolumna3: <input  ng-maxlength="25" ng-model="addColumn3" type="text"></div>
@@ -27,7 +28,7 @@
 </form>
 
 <div id="table">
-ZAWARTOŚĆ
+<p>Zawartość</p>
 <div id="scroll">	
  <table  ng-show="showTable"> <thead> <tr>
  <th>kolumna 1</th>
@@ -37,7 +38,7 @@ ZAWARTOŚĆ
  <th></th>
  </tr> </thead> 
  <tbody>
- <tr  ng-class="{highlight: column.id==selected}" ng-repeat="column in columns">
+ <tr  ng-class="{highlight: column.id==selected}" ng-repeat="column in columns" ng-click="highlight(column)">
  <td class="column">
   <div ng-hide="editingData[column.id]"> {{ column.column1 }}</div> 
    <div ng-show="editingData[column.id]"><input type="text" ng-model="column.column1"/></div></td> 
@@ -68,7 +69,7 @@ ZAWARTOŚĆ
 
    </td>
   </tr> </tbody> </table></div> </div>
-
+</div>
 
 
 <script>
@@ -195,9 +196,7 @@ app.controller("myCtrl", ['$scope',function($scope) {
 
     $scope.modify = function(column){
         $scope.editingData[column.id] = true;
-      
-        //podświetla wybrany wiersz
-        $scope.selected=column.id;
+
     };
 
     $scope.update = function(column){
@@ -206,6 +205,14 @@ app.controller("myCtrl", ['$scope',function($scope) {
         //przestaje podświetlać 
         $scope.selected=null;
     };
+
+$scope.highlight =function(column)
+{
+
+        //podświetla wybrany wiersz
+	  $scope.selected=column.id;
+};
+
 
 
 //dodaje nowy wiersz
