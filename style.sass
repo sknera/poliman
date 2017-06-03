@@ -8,6 +8,7 @@ body
 	color: rgba(0, 0, 0, 0.8)
 	font-family: 'Roboto', sans-serif
 	display: flex
+	overflow: hidden
 i
 	color: $main-color
 	padding: 5px
@@ -42,7 +43,7 @@ nav
 	font-size: 18px
 
 #top
-	width: 180vh
+	width: 178vh
 	background: white
 	height: 60px
 	display: flex
@@ -53,6 +54,7 @@ nav
 		right: 15px
 
 button
+	border: none
 	color: white
 	background: $main-color
 	border-radius: 5px
@@ -147,9 +149,17 @@ tbody
 	display: block
 	max-height: 465px
 	overflow-y: scroll
+	margin-right: 15px
 	&::-webkit-scrollbar
-		width: 0.1em
-		background-color: $main-color
+		width: 2px
+		height: 2px
+	&::-webkit-scrollbar-thumb 
+		border: 2px solid $main-color
+
+	&::-webkit-scrollbar-track 
+		border: 2px none #80ff00
+		border-radius: 14px
+
 
 p
 	font-weight: 700
@@ -159,7 +169,13 @@ p
 
 tr
 	width: 1100px
+	border-bottom: 0.1em solid #ccc
+	height: 50px
 
 td, th
 	padding-right: 90px
 
+th
+	border-right: 1px solid white
+	&:nth-child(5)
+		border-right: 0
