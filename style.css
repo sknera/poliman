@@ -6,11 +6,11 @@ display:flex;
 overflow:hidden;
 margin:0;
 padding:0;
-width:100%;
 }
 
-#conteiner{ 
- width:100%;
+#conteiner
+{
+  width:100%;
 }
 
 i {
@@ -176,6 +176,7 @@ background:rgba(29,137,228,0.3);
 }
 
 tbody {
+display:block;
 max-height:465px;
 overflow-y:scroll;
 margin-right:15px;
