@@ -13,8 +13,7 @@ i {
 
 nav {
   background: #282b30;
-  width: 10%;
-  min-width:130px;
+  width: 10vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -43,7 +42,7 @@ nav {
   font-size: 18px; }
 
 #top {
-  width: 100vw;
+  width: 90vw;
   background: white;
   height: 60px;
   display: flex;
