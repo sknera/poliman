@@ -13,7 +13,8 @@ i {
 
 nav {
   background: #282b30;
-  min-width: 10vw;
+  width: 10vw;
+  min-width:130px;
   height: 100vh;
   display: flex;
   flex-direction: column;
