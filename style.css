@@ -42,7 +42,7 @@ nav {
   font-size: 18px; }
 
 #top {
-  width: 178vh;
+  width: 100vw;
   background: white;
   height: 60px;
   display: flex;
