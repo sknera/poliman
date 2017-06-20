@@ -6,6 +6,7 @@ display:flex;
 overflow:hidden;
 margin:0;
 padding:0;
+width:100%;
 }
 
 #conteiner{ 
@@ -80,8 +81,8 @@ float:right;
 td {
 text-align:center;
 vertical-align:middle;
-height:200px;
-width:15%;
+min-height:200px;
+min-width:180px;
 color:rgba(0,0,0,0.4);
 font-size:18px;
 }
