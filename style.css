@@ -80,8 +80,8 @@ float:right;
 td {
 text-align:center;
 vertical-align:middle;
-min-height:200px;
-min-width:180px;
+height:200px;
+width:15%;
 color:rgba(0,0,0,0.4);
 font-size:18px;
 }
@@ -175,7 +175,6 @@ background:rgba(29,137,228,0.3);
 }
 
 tbody {
-display:block;
 max-height:465px;
 overflow-y:scroll;
 margin-right:15px;
